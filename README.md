@@ -5,7 +5,8 @@ A Gemini-powered FastAPI web app that automates two critical HR processes:
 - 📄 **Resume Screening** — Match candidate resumes to job descriptions
 - 💬 **Sentiment Analysis** — Analyze employee feedback to detect attrition risk
 
-Live Demo: _coming soon via [Render](https://render.com)_
+🚀 **Live Demo**: [https://hr-ai-assistant-50ij.onrender.com](https://hr-ai-assistant-50ij.onrender.com)
+
 
 ---
 
