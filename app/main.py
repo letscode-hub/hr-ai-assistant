@@ -51,18 +51,31 @@ async def resume_screen(
 
 
 @app.post("/sentiment-analyze", response_class=HTMLResponse)
-async def sentiment_analyze(
-    request: Request,
-    feedback: UploadFile = File(...)
-):
-    content = await feedback.read()
-    feedback_text = clean_feedback_text(content.decode("utf-8"))
+async def sentiment_analyze(request: Request, feedback: UploadFile = File(...)):
+    try:
+        print("[INFO] Sentiment route hit")
+        content = await feedback.read()
 
-    prompt = generate_sentiment_prompt(feedback_text)
-    result = call_llm(prompt)
+        print("[INFO] Feedback uploaded:", feedback.filename)
+        feedback_text = clean_feedback_text(content.decode("utf-8"))
 
-    return templates.TemplateResponse("result.html", {
-        "request": request,
-        "title": "Sentiment Analysis",
-        "result": result
-    })
+        print("[INFO] Cleaned text sample:", feedback_text[:100])
+        prompt = generate_sentiment_prompt(feedback_text)
+
+        print("[INFO] Prompt generated")
+        result = call_llm(prompt)
+
+        print("[INFO] LLM response received")
+        return templates.TemplateResponse("result.html", {
+            "request": request,
+            "title": "Sentiment Analysis",
+            "result": result
+        })
+
+    except Exception as e:
+        print("[ERROR]", str(e))
+        return HTMLResponse(
+            content=f"<h3>❌ Internal Server Error</h3><pre>{str(e)}</pre>",
+            status_code=500
+        )
+
