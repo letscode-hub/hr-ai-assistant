@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HR AI Assistant</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d1b2a;
+      color: #f8f9fa;
+    }
+    .card {
+      background-color: #1b263b;
+      border: 1px solid #415a77;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .form-control {
+      background-color: #415a77;
+      color: #f8f9fa;
+      border: 1px solid #778da9;
+    }
+    .form-control:focus {
+      border-color: #3a86ff;
+      background-color: #415a77;
+      color: white;
+    }
+    textarea {
+      resize: vertical;
+    }
+    h1, h4 {
+      color: #ffffff;
+    }
+    .btn-primary {
+      background-color: #3a86ff;
+      border: none;
+    }
+    .btn-success {
+      background-color: #06d6a0;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container py-5">
+
+  <h1 class="mb-5 text-center">🤖 HR AI Assistant</h1>
+
+  <div class="card mb-5 p-4">
+    <h4>📄 Resume Screening</h4>
+    <form action="/resume-screen" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Upload Resume (.txt or .pdf)</label>
+        <input type="file" name="resume" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Paste Job Description</label>
+        <textarea name="job_desc" rows="4" class="form-control" required></textarea>
+      </div>
+      <button class="btn btn-primary">📊 Analyze Resume</button>
+    </form>
+  </div>
+
+  <div class="card p-4">
+    <h4>💬 Sentiment Analysis</h4>
+    <form action="/sentiment-analyze" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Upload Employee Feedback (.txt)</label>
+        <input type="file" name="feedback" class="form-control" required>
+      </div>
+      <button class="btn btn-success">🧠 Analyze Feedback</button>
+    </form>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+We are seeking a skilled Software Engineer to join our backend team. 
+Requirements:
+- 3+ years of experience in Node.js, Python, or Java
+- Experience with REST APIs and SQL databases
+- Familiarity with cloud platforms (AWS/GCP)
+- B.Tech in Computer Science or equivalent
+- Strong communication skills
+Preferred:
+- Experience with Docker, CI/CD
+- Contribution to open-source projects

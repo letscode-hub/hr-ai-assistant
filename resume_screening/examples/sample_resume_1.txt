@@ -1,0 +1,22 @@
+Nivedita agarwal
+Software Engineer | nivedita.agarwal@gmail.com | +91-9876543210
+
+Summary:
+Experienced backend engineer with 4 years of experience in Python, Node.js, and AWS. Passionate about building scalable web applications.
+
+Skills:
+- Languages: Python, JavaScript
+- Frameworks: Express.js, FastAPI
+- Databases: PostgreSQL, MongoDB
+- Cloud: AWS (EC2, Lambda, S3), Docker
+- Tools: Git, CI/CD, Jenkins
+
+Experience:
+Software Engineer at TechCorp (2020–2023)
+- Built REST APIs for a finance dashboard
+- Migrated infrastructure to AWS
+
+Education:
+B.Tech in Computer Science, NIT Trichy (2016–2020)
+Certifications:
+- AWS Certified Developer Associate
